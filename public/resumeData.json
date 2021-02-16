@@ -1,121 +1,121 @@
 {
   "main": {
-    "name":"Matthew Rousseau",
-    "description":"I am a Computer Vision engineer and I love you <3",
-    "image":"profile_pic.jpg",
-    "bio":"I am a Computer Science engineer who loves working on visually-driven projects. Whether it's building a small face verification app with Keras, or visualising a physics simulation with OpenGL, I always want to deliver a finished product.",
-    "contactmessage":"If you would like to get in touch, please send me a message!",
+    "name": "Matthew Rousseau",
+    "description": "I am a Computer Vision engineer and I love you <3",
+    "image": "profile_pic.jpg",
+    "bio": "I am a Computer Science engineer who loves working on visually-driven projects. Whether it's building a small face verification app with Keras, or visualising a physics simulation with OpenGL, I always want to deliver a finished product.",
+    "contactmessage": "If you would like to get in touch, please send me a message!",
     "email": "matthew.rousseau@icloud.com",
     "phone": "+33651051791",
-    "github":"https://github.com/mattrouss",
-    "project":"https://github.com/nordicgiant2/react-nice-resume",
-    "address":{
-      "street":"(Your Street)",
-      "city":"(Your City)",
-      "state":"(Your State)",
+    "github": "https://github.com/mattrouss",
+    "project": "https://github.com/nordicgiant2/react-nice-resume",
+    "address": {
+      "street": "(Your Street)",
+      "city": "(Your City)",
+      "state": "(Your State)",
       "zip": "(Your Zip/Postal Code)"
     },
     "website": "http://www.matthewrousseau.com",
-    "resumedownload":"http://timbakerdev.com",
-    "social":[
+    "resumedownload": "http://timbakerdev.com",
+    "social": [
       {
-        "name":"linkedin",
-        "url":"https://www.linkedin.com/in/matthewrousseau/",
-        "className":"fa fa-linkedin"
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/matthewrousseau/",
+        "className": "fa fa-linkedin"
       },
       {
-        "name":"github",
-        "url":"https://github.com/mattrouss",
-        "className":"fa fa-github"
+        "name": "github",
+        "url": "https://github.com/mattrouss",
+        "className": "fa fa-github"
       }
     ]
   },
-  "resume":{
-    "skillmessage":"Look at all my skills!",
-    "education":[
+  "resume": {
+    "skillmessage": "Look at all my skills!",
+    "education": [
       {
-        "school":"EPITA: School of Engineering and Computer Science",
-        "degree":"Masters in Computer Science",
-        "graduated":"September 2021",
-        "description":"During my 4 years of studies at EPITA, I was able to develop my skills as a developer and as an engineer. I have become a proficient programmer mostly in Python and C++, with a little bit of OpenGL and web programming as well. Many of my class projects were performed as a group, and I have learned to work as an active role and as leader in such projects. During my final years of the cursus, I have specialized in the \"IMAGE\" major, whose teachings include image analysis, machine learning and computer graphics."
+        "school": "EPITA: School of Engineering and Computer Science",
+        "degree": "Masters in Computer Science",
+        "graduated": "September 2021",
+        "description": "During my 4 years of studies at EPITA, I was able to develop my skills as a developer and as an engineer. I have become a proficient programmer mostly in Python and C++, with a little bit of OpenGL and web programming as well. Many of my class projects were performed as a group, and I have learned to work as an active role and as leader in such projects. During my final years of the cursus, I have specialized in the \"IMAGE\" major, whose teachings include image analysis, machine learning and computer graphics."
       }
     ],
-    "work":[
+    "work": [
       {
-        "company":"Odin Vision",
-        "title":"Software Engineer",
-        "years":"Sep 2019 - Feb 2020",
-        "description":"Development on the company's annotation-training-evaluation pipeline. My first task during this internship was to add features to Odin Vision's annotation tool, where I was able to discuss with medical clinicians an effective annotation process. During the largest part of my internship, I worked on an internal tool whose objective was to run containerized machine learning algorithms on any type of data in a scheduled manner, deployed on the cloud using Kubernetes and Apache Airflow. This tool provides an automation in retraining machine learning and deep learning models, once new annotated data is acquired."
+        "company": "Odin Vision",
+        "title": "Software Engineer",
+        "years": "Sep 2019 - Feb 2020",
+        "description": "Development on the company's annotation-training-evaluation pipeline. My first task during this internship was to add features to Odin Vision's annotation tool, where I was able to discuss with medical clinicians an effective annotation process. During the largest part of my internship, I worked on an internal tool whose objective was to run containerized machine learning algorithms on any type of data in a scheduled manner, deployed on the cloud using Kubernetes and Apache Airflow. This tool provides an automation in retraining machine learning and deep learning models, once new annotated data is acquired."
       },
       {
-        "company":"Kernix",
-        "title":"Software Developer",
-        "years":"June - July 2018",
-        "description":"I integrated the Data Science department and participated in Kernix's PSDP (Predictive Smart Data Platform) project. The project consisted in creating a smart data platform aiming to improve business intelligence features by providing a recommendation system, and predictive services (dashboard, ranking, scoring, ...)."
+        "company": "Kernix",
+        "title": "Software Developer",
+        "years": "June - July 2018",
+        "description": "I integrated the Data Science department and participated in Kernix's PSDP (Predictive Smart Data Platform) project. The project consisted in creating a smart data platform aiming to improve business intelligence features by providing a recommendation system, and predictive services (dashboard, ranking, scoring, ...)."
       }
     ],
-    "skills":[
+    "skills": [
       {
-        "name":"Python",
-        "level":"60%"
+        "name": "Python",
+        "level": "60%"
       },
       {
-        "name":"VueJs",
-        "level":"55%"
+        "name": "VueJs",
+        "level": "55%"
       },
       {
-        "name":"ReactJs",
-        "level":"50%"
+        "name": "ReactJs",
+        "level": "50%"
       },
       {
-        "name":"CSS",
-        "level":"90%"
+        "name": "CSS",
+        "level": "90%"
       },
       {
-        "name":"PHP",
-        "level":"80%"
+        "name": "PHP",
+        "level": "80%"
       },
       {
-        "name":"Swift",
-        "level":"50%"
+        "name": "Swift",
+        "level": "50%"
       },
       {
-        "name":"JAVA",
-        "level":"80%"
+        "name": "JAVA",
+        "level": "80%"
       }
     ]
   },
-  "portfolio":{
+  "portfolio": {
     "projects": [
       {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"canadian-wanderlust.jpg",
-        "url":"https://www.canadianwanderlust.com"
+        "title": "Canadian Wanderlust",
+        "category": "My Travel Blog for my post-university travels",
+        "image": "canadian-wanderlust.jpg",
+        "url": "https://www.canadianwanderlust.com"
       },
       {
-        "title":"Fury Fighting Gear",
-        "category":"(offline now) A fighting gear company I started",
-        "image":"fury-fighting-gear.jpg",
-        "url":"http://www.timbakerdev.com"
+        "title": "Fury Fighting Gear",
+        "category": "(offline now) A fighting gear company I started",
+        "image": "fury-fighting-gear.jpg",
+        "url": "http://www.timbakerdev.com"
       },
       {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"original-thai-food.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+        "title": "Original Thai Food",
+        "category": "Website I built for a restaurant I like in Thailand",
+        "image": "original-thai-food.jpg",
+        "url": "http://www.timbakerdev.com/originalthaifood.github.io"
       },
       {
-        "title":"Resume Website",
-        "category":"A React based resume website template",
-        "image":"resume-website.jpg",
-        "url":"http://www.timbakerdev.com"
+        "title": "Resume Website",
+        "category": "A React based resume website template",
+        "image": "resume-website.jpg",
+        "url": "http://www.timbakerdev.com"
       },
       {
-        "title":"Smirkspace",
-        "category":"(MVP Only) A React and Meteor based chat University project.",
-        "image":"smirkspace.jpg",
-        "url":"http://www.smirkspace.com"
+        "title": "Smirkspace",
+        "category": "(MVP Only) A React and Meteor based chat University project.",
+        "image": "smirkspace.jpg",
+        "url": "http://www.smirkspace.com"
       }
     ]
   }

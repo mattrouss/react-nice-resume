@@ -1,0 +1,44 @@
+{
+    "projects": [
+        {
+            "title": "Capture",
+            "category": "My Travel Blog for my post-university travels",
+            "image": "canadian-wanderlust.jpg",
+            "url": "https://www.canadianwanderlust.com",
+            "route": "capture",
+            "description": "This is a description"
+        },
+        {
+            "title": "Elplant",
+            "category": "Plant Simulation using L-Systems",
+            "image": "fury-fighting-gear.jpg",
+            "url": "http://www.timbakerdev.com",
+            "route": "elplant",
+            "description": "This is a description"
+        },
+        {
+            "title": "Boid Simulation",
+            "category": "Simulating fish with boid in C++/OpenGL",
+            "image": "original-thai-food.jpg",
+            "url": "http://www.timbakerdev.com/originalthaifood.github.io",
+            "route": "boids",
+            "description": "This is a description"
+        },
+        {
+            "title": "Face Verification",
+            "category": "A face verification app using Siamese Networks in Keras",
+            "image": "resume-website.jpg",
+            "url": "http://www.timbakerdev.com",
+            "route": "face-verif",
+            "description": "This is a description"
+        },
+        {
+            "title": "Premonitions",
+            "category": "Mini Jam 63: Premonitions",
+            "image": "smirkspace.jpg",
+            "url": "https://justcasualcoder.itch.io/premonitions",
+            "route": "premonitions",
+            "description": "This is a description"
+        }
+    ]
+}

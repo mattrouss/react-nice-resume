@@ -12,8 +12,24 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            resumeData: {}
+            resumeData: {},
+            projectData: {}
         };
+    }
+
+    getProjectData() {
+        $.ajax({
+            url: './projectData.json',
+            dataType: 'json',
+            cache: false,
+            success: function (data) {
+                this.setState({ projectData: data });
+            }.bind(this),
+            error: function (xhr, status, err) {
+                console.log(err);
+                alert(err);
+            }
+        });
     }
 
     getResumeData() {
@@ -33,6 +49,7 @@ class Home extends Component {
 
     componentDidMount() {
         this.getResumeData();
+        this.getProjectData();
     }
 
 
@@ -42,7 +59,7 @@ class Home extends Component {
                 <Header data={this.state.resumeData.main} />
                 <About data={this.state.resumeData.main} />
                 <Resume data={this.state.resumeData.resume} />
-                <Portfolio data={this.state.resumeData.portfolio} />
+                <Portfolio data={this.state.projectData} />
                 <Contact data={this.state.resumeData.main} />
                 <Footer data={this.state.resumeData.main} />
             </div>
