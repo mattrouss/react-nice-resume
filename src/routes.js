@@ -3,7 +3,7 @@ import $ from 'jquery';
 import Home from './Components/Home';
 import ProjectDetail from './Components/ProjectDetail';
 import NoMatch from './Components/NoMatch';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 class Routes extends Component {
     constructor(props) {

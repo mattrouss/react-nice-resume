@@ -9,7 +9,6 @@ class ProjectDetail extends Component {
             var project = this.props.data.projects.find(elem => elem.route === id);
             console.log(project);
             var title = project.title;
-            var route = project.route;
             var subtitle = project.category;
             var description = project.description;
 
@@ -26,7 +25,7 @@ class ProjectDetail extends Component {
 
         if (project) {
             return (
-                <React.Fragment>
+                <div>
                     <header id="#home" className="project-bg" style={{ backgroundImage: "url(/images/portfolio/" + project.banner + ")",
                                                 backgroundPosition: 'center',
                                                 backgroundSize: 'cover',
@@ -59,7 +58,7 @@ class ProjectDetail extends Component {
                         {description}
                     </section>
                     <Footer />
-                </React.Fragment>
+                </div>
             );
         }
         return <NoMatch />
