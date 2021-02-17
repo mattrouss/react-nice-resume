@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import Home from './Components/Home';
-import ProjectDetail from './ProjectDetail';
-import Header from './Components/Header';
+import ProjectDetail from './Components/ProjectDetail';
 import NoMatch from './Components/NoMatch';
 import { Route, Switch, Redirect } from 'react-router-dom';
 

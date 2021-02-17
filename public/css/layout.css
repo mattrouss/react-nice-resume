@@ -412,15 +412,15 @@ ul#nav li.current a { color: #fe6928; }
 
 #portfolio {
    background: #ebeeee;
-   padding-top: 90px;
+   padding-top: 70px;
    padding-bottom: 60px;
 }
 #portfolio h1 {
-   font: 15px/24px 'opensans-semibold', sans-serif;
+   font: 24px/48px 'opensans-semibold', sans-serif;
    text-transform: uppercase;
    letter-spacing: 1px;
    text-align: center;
-   margin-bottom: 48px;
+   margin-bottom: 54px;
    color: #95A3A3;
 }
 
@@ -486,6 +486,8 @@ ul#nav li.current a { color: #fe6928; }
    margin-top: -15px;
 }
 .portfolio-item .item-wrap img {
+   height: 120px;
+   width: 300px;
    vertical-align: bottom;
 }
 .portfolio-item .portfolio-item-meta { padding: 18px }
@@ -1020,4 +1022,28 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 .github-btn{
    background-color: #34495e !important;
+}
+
+/* ------------------------------------------------------------------ */
+/* j. Project Details
+/* ------------------------------------------------------------------ */
+
+.project-description {
+   background: #ebeeee;
+   padding-top: 90px;
+   padding-bottom: 60px;
+}
+.project-detail h1 {
+   font: 15px/24px 'opensans-semibold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   text-align: center;
+   margin-bottom: 48px;
+   color: #b1bdbd;
+}
+header .project-bg {
+   color: #b1bdbd;
+   background-position: 'center';
+   background-size: 'cover';
+   background-repeat: 'no-repeat';
 }

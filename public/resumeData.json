@@ -1,15 +1,14 @@
 {
   "main": {
     "name": "Matthew Rousseau",
-    "description": "I am a Computer Vision engineer and I love you <3",
+    "description": "I am a Computer Vision engineer",
     "image": "profile_pic.jpg",
-    "bio": "I am a Computer Science engineer who loves working on visually-driven projects. Whether it's building a small face verification app with Keras, or visualising a physics simulation with OpenGL, I always want to deliver a finished product.",
+    "bio": "I am a Computer Science engineer who loves working on visually-driven projects. Whether it's building a small face verification app with Keras, or visualising a physics simulation with OpenGL, I always enjoy the challenge and want to deliver a finished product.",
     "contactmessage": "If you would like to get in touch, please send me a message!",
     "email": "matthew.rousseau@icloud.com",
     "phone": "+33651051791",
     "github": "https://github.com/mattrouss",
     "linkedin": "https://www.linkedin.com/in/matthewrousseau/",
-    "project": "https://github.com/nordicgiant2/react-nice-resume",
     "address": {
       "street": "(Your Street)",
       "city": "(Your City)",
