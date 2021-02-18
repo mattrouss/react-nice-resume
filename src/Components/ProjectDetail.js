@@ -7,7 +7,6 @@ class ProjectDetail extends Component {
         var id = this.props.match.params.id;
         if (Object.keys(this.props.data).length !== 0) {
             var project = this.props.data.projects.find(elem => elem.route === id);
-            console.log(project);
             var title = project.title;
             var subtitle = project.category;
             var description = project.description;
