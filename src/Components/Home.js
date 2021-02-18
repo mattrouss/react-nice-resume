@@ -13,23 +13,7 @@ class Home extends Component {
         super(props);
         this.state = {
             resumeData: {},
-            projectData: {}
         };
-    }
-
-    getProjectData() {
-        $.ajax({
-            url: './projectData.json',
-            dataType: 'json',
-            cache: false,
-            success: function (data) {
-                this.setState({ projectData: data });
-            }.bind(this),
-            error: function (xhr, status, err) {
-                console.log(err);
-                alert(err);
-            }
-        });
     }
 
     getResumeData() {
@@ -49,7 +33,6 @@ class Home extends Component {
 
     componentDidMount() {
         this.getResumeData();
-        this.getProjectData();
     }
 
 

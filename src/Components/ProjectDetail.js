@@ -38,12 +38,13 @@ class ProjectDetail extends Component {
                         </h2>);
                 } else if (Object.keys(paragraph)[0] === 'image') {
                     return (<div key={idx}> 
-                                <img src={"/images/portfolio/" + paragraph.image.url}></img>
+                                <img className="project-image" src={"/images/portfolio/" + paragraph.image.url}></img>
                                 <p className="image-subtext">
                                     {paragraph.image.subtext}
                                 </p>
                             </div>);
-
+                } else if (Object.keys(paragraph)[0] === 'link') {
+                    return (<a className="link" href={paragraph.link}>{paragraph.link}</a>);
                 }
             });
 
@@ -89,10 +90,12 @@ class ProjectDetail extends Component {
                         </p>
 
                     </header>
-                    <section id="description" className="project-description container">
+                    <section id="description" className="project-description">
+                    <div className="row container">
                         <div className="article">
                             {article}
                         </div>
+                    </div>
                     </section>
                     <Footer data={this.props.data.main}/>
                 </div>

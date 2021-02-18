@@ -261,9 +261,13 @@ ul#nav li.current a { color: #fe6928; }
 }
 #resume .info {
    font: 16px/24px 'librebaskerville-italic', serif;
-   color: #6E7881;
+   color: #929292;
    margin-bottom: 18px;
    margin-top: 9px;
+}
+
+#resume .description {
+   color: #3e4446;
 }
 #resume .info span {
    margin-right: 5px;
@@ -1082,6 +1086,13 @@ header .project-bg {
    line-height: 1.58;
  }
 
+ .link {
+   font-size: 19px;
+ }
+
+ .project-image {
+    margin-top: 10px;
+ }
  .image-subtext {
    color: #757575;
    font-size: 14px;
