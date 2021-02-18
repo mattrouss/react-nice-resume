@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import loadjs from 'loadjs';
+import DefaultArticle from './DefaultComponent';
+import PremonitionsArticle from './PremonitionsArticle';
 import NoMatch from './NoMatch';
 import Footer from './Footer';
 
@@ -21,32 +23,22 @@ class ProjectDetail extends Component {
         });
     }
 
+    getArticleComponent(id) {
+        switch(id) {
+            case "premonitions":
+                return <PremonitionsArticle />;
+            default:
+                return <DefaultArticle />;
+        }
+    }
+
     render() {
         var id = this.props.match.params.id;
         if (this.props.data && Object.keys(this.props.data).length !== 0) {
             var project = this.props.data.projects.find(elem => elem.route === id);
             var title = project.title;
             var subtitle = project.category;
-            var article = project.description.paragraphs.map(function(paragraph, idx){
-                if (Object.keys(paragraph)[0] === "paragraph") {
-                    return (<p key={idx} className="paragraph">
-                                {paragraph.paragraph}
-                            </p>);
-                } else if (Object.keys(paragraph)[0] === "title") {
-                    return (<h2 key={idx} className="title">
-                            {paragraph.title}
-                        </h2>);
-                } else if (Object.keys(paragraph)[0] === 'image') {
-                    return (<div key={idx}> 
-                                <img className="project-image" src={"/images/portfolio/" + paragraph.image.url}></img>
-                                <p className="image-subtext">
-                                    {paragraph.image.subtext}
-                                </p>
-                            </div>);
-                } else if (Object.keys(paragraph)[0] === 'link') {
-                    return (<a className="link" href={paragraph.link}>{paragraph.link}</a>);
-                }
-            });
+            var article = this.getArticleComponent(project.route);
 
             var projectNav = this.props.data.projects.map(function (project) {
                 var nav = <a href={"/project/" + project.route}>{project.title}</a>;

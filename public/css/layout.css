@@ -1086,6 +1086,13 @@ header .project-bg {
    line-height: 1.58;
  }
 
+ .paragraph b {
+   margin-top: 21px;
+   font-size: 19px;
+   letter-spacing: -0.03px;
+   line-height: 1.58;
+ }
+
  .link {
    font-size: 19px;
  }
