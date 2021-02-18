@@ -24,6 +24,8 @@
 
 	    var target = this.hash,
 	    $target = $(target);
+       console.log(target);
+       console.log($target);
 
 	    $('html, body').stop().animate({
 	        'scrollTop': $target.offset().top

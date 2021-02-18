@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 
 class Portfolio extends Component {
   render() {
-
-    if (Object.keys(this.props.data).length !== 0) {
-      var projects = this.props.data.projects.map(function (projects) {
+    if (this.props.data && Object.keys(this.props.data).length !== 0) {
+      var projects = this.props.data.map(function (projects) {
         var projectImage = 'images/portfolio/' + projects.image;
         
         return (

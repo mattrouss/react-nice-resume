@@ -1,17 +1,38 @@
 import React, { Component } from 'react';
+import loadjs from 'loadjs';
 import NoMatch from './NoMatch';
 import Footer from './Footer';
 
 class ProjectDetail extends Component {
+    componentWillMount() {
+        loadjs('/js/jquery-migrate-1.2.1.min.js', function () {
+            loadjs('/js/jquery-1.10.2.min.js', function () {
+                loadjs('/js/jquery.flexslider.js', function () {
+                    loadjs('/js/waypoints.js', function () {
+                        loadjs('/js/jquery.fittext.js', function () {
+                            loadjs('/js/magnific-popup.js', function () {
+                                loadjs('/js/init.js');
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    }
+
     render() {
         var id = this.props.match.params.id;
-        if (Object.keys(this.props.data).length !== 0) {
+        if (this.props.data && Object.keys(this.props.data).length !== 0) {
             var project = this.props.data.projects.find(elem => elem.route === id);
             var title = project.title;
             var subtitle = project.category;
-            var description = project.description;
+            var article = project.description.paragraphs.map((paragraph, idx) => (
+                            <p key={idx} className="paragraph">
+                                {paragraph}
+                            </p>
+            ));
 
-            var projectNav = this.props.data.projects.map(function(project) {
+            var projectNav = this.props.data.projects.map(function (project) {
                 var nav = <a href={"/project/" + project.route}>{project.title}</a>;
                 if (project.route === id) {
                     return <li key={project.route} className="current">{nav}</li>
@@ -25,10 +46,7 @@ class ProjectDetail extends Component {
         if (project) {
             return (
                 <div>
-                    <header id="#home" className="project-bg" style={{ backgroundImage: "url(/images/portfolio/" + project.banner + ")",
-                                                backgroundPosition: 'center',
-                                                backgroundSize: 'cover',
-                                                }}>
+                    <header id="home" className="project-bg" style={{ backgroundImage: "url(/images/portfolio/" + project.banner + ")"}}>
                         <nav id="nav-wrap">
                             <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
                             <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
@@ -53,10 +71,12 @@ class ProjectDetail extends Component {
                         </p>
 
                     </header>
-                    <section id="description" className='project-description'>
-                        {description}
+                    <section id="description" className="project-description container">
+                        <div className="article">
+                            {article}
+                        </div>
                     </section>
-                    <Footer />
+                    <Footer data={this.props.data.main}/>
                 </div>
             );
         }
