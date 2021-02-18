@@ -4,7 +4,8 @@ import NoMatch from './NoMatch';
 import Footer from './Footer';
 
 class ProjectDetail extends Component {
-    componentWillMount() {
+
+    componentDidMount() {
         loadjs('/js/jquery-migrate-1.2.1.min.js', function () {
             loadjs('/js/jquery-1.10.2.min.js', function () {
                 loadjs('/js/jquery.flexslider.js', function () {
@@ -26,11 +27,25 @@ class ProjectDetail extends Component {
             var project = this.props.data.projects.find(elem => elem.route === id);
             var title = project.title;
             var subtitle = project.category;
-            var article = project.description.paragraphs.map((paragraph, idx) => (
-                            <p key={idx} className="paragraph">
-                                {paragraph}
-                            </p>
-            ));
+            var article = project.description.paragraphs.map(function(paragraph, idx){
+                if (Object.keys(paragraph)[0] === "paragraph") {
+                    return (<p key={idx} className="paragraph">
+                                {paragraph.paragraph}
+                            </p>);
+                } else if (Object.keys(paragraph)[0] === "title") {
+                    return (<h2 key={idx} className="title">
+                            {paragraph.title}
+                        </h2>);
+                } else if (Object.keys(paragraph)[0] === 'image') {
+                    return (<div key={idx}> 
+                                <img src={"/images/portfolio/" + paragraph.image.url}></img>
+                                <p className="image-subtext">
+                                    {paragraph.image.subtext}
+                                </p>
+                            </div>);
+
+                }
+            });
 
             var projectNav = this.props.data.projects.map(function (project) {
                 var nav = <a href={"/project/" + project.route}>{project.title}</a>;

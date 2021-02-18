@@ -1029,7 +1029,6 @@ footer .social-links li:first-child { margin-left: 0; }
 
 .project-description {
    background: #ebeeee;
-   padding-top: 90px;
    padding-bottom: 60px;
 }
 .project-detail h1 {
@@ -1053,13 +1052,6 @@ header .project-bg {
    margin: 40px 10px;
  }
 
- .paragraph {
-   color: #4f5252;
-   margin-top: 21px;
-   font-size: 21px;
-   letter-spacing: -0.03px;
-   line-height: 1.58;
- }
  .container {
    display: -ms-grid;
    display: grid;
@@ -1072,3 +1064,28 @@ header .project-bg {
      ". . footer . .";
  }
  
+.title {
+   font-size: 32px;
+   font-weight: 700;
+   padding-bottom: 20px;
+   margin: 56px 0 -13px -1.883px;
+   text-align: left;
+   line-height: 34.5px;
+   letter-spacing: -0.45px;
+ }
+
+ .paragraph {
+   color: #292929;
+   margin-top: 21px;
+   font-size: 19px;
+   letter-spacing: -0.03px;
+   line-height: 1.58;
+ }
+
+ .image-subtext {
+   color: #757575;
+   font-size: 14px;
+   font-style: italic;
+   letter-spacing: -0.03px;
+   text-align: center;
+ }
