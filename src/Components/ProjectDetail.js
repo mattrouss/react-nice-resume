@@ -46,7 +46,10 @@ class ProjectDetail extends Component {
         if (project) {
             return (
                 <div>
-                    <header id="home" className="project-bg" style={{ backgroundImage: "url(/images/portfolio/" + project.banner + ")"}}>
+                    <header id="home" className="project-bg" style={{ backgroundImage: "url(/images/portfolio/" + project.banner + ")",
+                                                                      backgroundPosition: "center",
+                                                                      backgroundSize: "cover",
+                                                                      backgroundRepeat: "no-repeat"}}>
                         <nav id="nav-wrap">
                             <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
                             <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
