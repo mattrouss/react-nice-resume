@@ -1047,7 +1047,9 @@ header .project-bg {
    color: #b1bdbd;
 }
 
-.article {
+#article {
+   position: relative;
+   width: 100%;
    -ms-grid-row: 2;
    -ms-grid-column: 3;
    grid-row: 2;
@@ -1068,7 +1070,7 @@ header .project-bg {
      ". . footer . .";
  }
  
-.title {
+#article h2 {
    font-size: 32px;
    font-weight: 700;
    padding-bottom: 20px;
@@ -1078,7 +1080,7 @@ header .project-bg {
    letter-spacing: -0.45px;
  }
 
- .paragraph {
+ #article p {
    color: #292929;
    margin-top: 21px;
    font-size: 19px;
@@ -1086,11 +1088,19 @@ header .project-bg {
    line-height: 1.58;
  }
 
- .paragraph b {
+ #article b {
    margin-top: 21px;
    font-size: 19px;
    letter-spacing: -0.03px;
    line-height: 1.58;
+ }
+
+.image-subtext {
+   color: #757575;
+   font-size: 14px;
+   font-style: italic;
+   letter-spacing: -0.03px;
+   text-align: center;
  }
 
  .link {
@@ -1099,11 +1109,4 @@ header .project-bg {
 
  .project-image {
     margin-top: 10px;
- }
- .image-subtext {
-   color: #757575;
-   font-size: 14px;
-   font-style: italic;
-   letter-spacing: -0.03px;
-   text-align: center;
  }

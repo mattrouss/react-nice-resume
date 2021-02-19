@@ -84,7 +84,7 @@ class ProjectDetail extends Component {
                     </header>
                     <section id="description" className="project-description">
                     <div className="row container">
-                        <div className="article">
+                        <div id="article">
                             {article}
                         </div>
                     </div>
