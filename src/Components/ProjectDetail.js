@@ -4,17 +4,20 @@ import DefaultArticle from './DefaultComponent';
 import PremonitionsArticle from './PremonitionsArticle';
 import NoMatch from './NoMatch';
 import Footer from './Footer';
+import BoidsArticle from './BoidsArticle';
 
 class ProjectDetail extends Component {
 
     componentDidMount() {
         loadjs('/js/jquery-migrate-1.2.1.min.js', function () {
             loadjs('/js/jquery-1.10.2.min.js', function () {
-                loadjs('/js/jquery.flexslider.js', function () {
-                    loadjs('/js/waypoints.js', function () {
-                        loadjs('/js/jquery.fittext.js', function () {
-                            loadjs('/js/magnific-popup.js', function () {
-                                loadjs('/js/init.js');
+                loadjs('/js/jquery-ui-1.12.1.min.js', function () {
+                    loadjs('/js/jquery.flexslider.js', function () {
+                        loadjs('/js/waypoints.js', function () {
+                            loadjs('/js/jquery.fittext.js', function () {
+                                loadjs('/js/magnific-popup.js', function () {
+                                    loadjs('/js/init.js');
+                                });
                             });
                         });
                     });
@@ -24,9 +27,11 @@ class ProjectDetail extends Component {
     }
 
     getArticleComponent(id) {
-        switch(id) {
+        switch (id) {
             case "premonitions":
                 return <PremonitionsArticle />;
+            case "boids":
+                return <BoidsArticle />;
             default:
                 return <DefaultArticle />;
         }
@@ -54,10 +59,12 @@ class ProjectDetail extends Component {
         if (project) {
             return (
                 <div>
-                    <header id="home" className="project-bg" style={{ backgroundImage: "url(/images/portfolio/" + project.banner + ")",
-                                                                      backgroundPosition: "center",
-                                                                      backgroundSize: "cover",
-                                                                      backgroundRepeat: "no-repeat"}}>
+                    <header id="home" className="project-bg" style={{
+                        backgroundImage: "url(/images/portfolio/" + project.banner + ")",
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                        backgroundRepeat: "no-repeat"
+                    }}>
                         <nav id="nav-wrap">
                             <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
                             <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
@@ -83,18 +90,18 @@ class ProjectDetail extends Component {
 
                     </header>
                     <section id="description" className="project-description">
-                    <div className="row container">
-                        <div id="article">
-                            {article}
+                        <div className="row container">
+                            <div id="article">
+                                {article}
+                            </div>
                         </div>
-                    </div>
                     </section>
-                    <Footer data={this.props.data.main}/>
+                    <Footer data={this.props.data.main} />
                 </div>
             );
         }
         return <NoMatch />
-            
+
     }
 }
 
