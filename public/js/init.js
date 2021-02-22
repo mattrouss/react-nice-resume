@@ -4,48 +4,46 @@
 /*
 -----------------------------------------------------------------------------------*/
 
- jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 
-/*----------------------------------------------------*/
-/* FitText Settings
------------------------------------------------------- */
+   /*----------------------------------------------------*/
+   /* FitText Settings
+   ------------------------------------------------------ */
 
-    setTimeout(function() {
-	   $('h1.responsive-headline').fitText(1, { minFontSize: '40px', maxFontSize: '90px' });
-	 }, 100);
-
-
-/*----------------------------------------------------*/
-/* Smooth Scrolling
------------------------------------------------------- */
-
-   $('.smoothscroll').on('click',function (e) {
-	    e.preventDefault();
-
-	    var target = this.hash,
-	    $target = $(target);
-       console.log(target);
-       console.log($target);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 800, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
+   setTimeout(function () {
+      $('h1.responsive-headline').fitText(1, { minFontSize: '40px', maxFontSize: '90px' });
+   }, 100);
 
 
-/*----------------------------------------------------*/
-/* Highlight the current section in the navigation bar
-------------------------------------------------------*/
+   /*----------------------------------------------------*/
+   /* Smooth Scrolling
+   ------------------------------------------------------ */
 
-	var sections = $("section");
-	var navigation_links = $("#nav-wrap a");
+   $('.smoothscroll').on('click', function (e) {
+      e.preventDefault();
+
+      var target = this.hash,
+         $target = $(target);
+
+      $('html, body').stop().animate({
+         'scrollTop': $target.offset().top
+        }, 800, 'easeInOutExpo', function () {
+         window.location.hash = target;
+        });
+   });
+
+
+   /*----------------------------------------------------*/
+   /* Highlight the current section in the navigation bar
+   ------------------------------------------------------*/
+
+   var sections = $("section");
+   var navigation_links = $("#nav-wrap a");
    var url_path = window.location.href.substring(window.location.href.lastIndexOf('/'));
    if (url_path == "/") {
       sections.waypoint({
 
-         handler: function(event, direction) {
+         handler: function (event, direction) {
 
             var active_section;
 
@@ -64,34 +62,34 @@
 
    }
 
-/*----------------------------------------------------*/
-/*	Make sure that #header-background-image height is
-/* equal to the browser height.
------------------------------------------------------- */
+   /*----------------------------------------------------*/
+   /*	Make sure that #header-background-image height is
+   /* equal to the browser height.
+   ------------------------------------------------------ */
 
    $('header').css({ 'height': $(window).height() });
-   $(window).on('resize', function() {
+   $(window).on('resize', function () {
 
-        $('header').css({ 'height': $(window).height() });
-        $('body').css({ 'width': $(window).width() })
+      $('header').css({ 'height': $(window).height() });
+      $('body').css({ 'width': $(window).width() })
    });
 
 
-/*----------------------------------------------------*/
-/*	Fade In/Out Primary Navigation
-------------------------------------------------------*/
+   /*----------------------------------------------------*/
+   /*	Fade In/Out Primary Navigation
+   ------------------------------------------------------*/
 
-   $(window).on('scroll', function() {
+   $(window).on('scroll', function () {
 
-		var h = $('header').height();
-		var y = $(window).scrollTop();
+      var h = $('header').height();
+      var y = $(window).scrollTop();
       var nav = $('#nav-wrap');
 
-	   if ( (y > h*.20) && (y < h) && ($(window).outerWidth() > 768 ) ) {
-	      nav.fadeOut('fast');
-	   }
+      if ((y > h * .20) && (y < h) && ($(window).outerWidth() > 768)) {
+         nav.fadeOut('fast');
+      }
       else {
-         if (y < h*.20) {
+         if (y < h * .20) {
             nav.removeClass('opaque').fadeIn('fast');
          }
          else {
@@ -99,32 +97,32 @@
          }
       }
 
-	});
+   });
 
 
-/*----------------------------------------------------*/
-/*	Modal Popup
-------------------------------------------------------*/
+   /*----------------------------------------------------*/
+   /*	Modal Popup
+   ------------------------------------------------------*/
 
-    $('.item-wrap a').magnificPopup({
+   $('.item-wrap a').magnificPopup({
 
-       type:'inline',
-       fixedContentPos: false,
-       removalDelay: 200,
-       showCloseBtn: false,
-       mainClass: 'mfp-fade'
+      type: 'inline',
+      fixedContentPos: false,
+      removalDelay: 200,
+      showCloseBtn: false,
+      mainClass: 'mfp-fade'
 
-    });
+   });
 
-    $(document).on('click', '.popup-modal-dismiss', function (e) {
-    		e.preventDefault();
-    		$.magnificPopup.close();
-    });
+   $(document).on('click', '.popup-modal-dismiss', function (e) {
+      e.preventDefault();
+      $.magnificPopup.close();
+   });
 
 
-/*----------------------------------------------------*/
-/*	Flexslider
-/*----------------------------------------------------*/
+   /*----------------------------------------------------*/
+   /*	Flexslider
+   /*----------------------------------------------------*/
    $('.flexslider').flexslider({
       namespace: "flex-",
       controlsContainer: ".flex-container",
@@ -137,11 +135,11 @@
       randomize: false,
    });
 
-/*----------------------------------------------------*/
-/*	contact form
-------------------------------------------------------*/
+   /*----------------------------------------------------*/
+   /*	contact form
+   ------------------------------------------------------*/
 
-   $('form#contactForm button.submit').click(function() {
+   $('form#contactForm button.submit').click(function () {
 
       $('#image-loader').fadeIn();
 
@@ -151,30 +149,30 @@
       var contactMessage = $('#contactForm #contactMessage').val();
 
       var data = 'contactName=' + contactName + '&contactEmail=' + contactEmail +
-               '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
+         '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
 
       $.ajax({
 
-	      type: "POST",
-	      url: "inc/sendEmail.php",
-	      data: data,
-	      success: function(msg) {
+         type: "POST",
+         url: "inc/sendEmail.php",
+         data: data,
+         success: function (msg) {
 
             // Message was sent
             if (msg == 'OK') {
                $('#image-loader').fadeOut();
                $('#message-warning').hide();
                $('#contactForm').fadeOut();
-               $('#message-success').fadeIn();   
+               $('#message-success').fadeIn();
             }
             // There was an error
             else {
                $('#image-loader').fadeOut();
                $('#message-warning').html(msg);
-	            $('#message-warning').fadeIn();
+               $('#message-warning').fadeIn();
             }
 
-	      }
+         }
 
       });
       return false;
